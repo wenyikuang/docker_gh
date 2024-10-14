@@ -34,7 +34,7 @@ jobs:
       run: |
         echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
       env:
-        OWNER: '${{ secrets.DOCKER_USERNAME }}'
+        OWNER: '${{ env.DOCKER_USERNAME }}'
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
